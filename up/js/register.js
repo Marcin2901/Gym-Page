@@ -1,5 +1,4 @@
 // first page
-const slidePage = document.querySelector('.register__content--form__page');
 const nextBtn1 = document.querySelector('.next-1');
 
 // second page

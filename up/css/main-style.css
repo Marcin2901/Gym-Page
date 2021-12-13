@@ -1099,18 +1099,158 @@ i {
 }
 
 .footer {
-  background-color: var(--color-tertiary);
   grid-column: 1 / -1;
-  height: 600px;
+  background-image: linear-gradient(var(--color-tertiary-m), var(--color-tertiary-m)), url("../img/footer/footer-bg.jpg");
+  display: grid;
+  grid-template-rows: repeat(3, max-content);
+  row-gap: 7rem;
 }
 
-.hero, .motto, .features__content:nth-child(1), .features__content:nth-child(2), .features__content:nth-child(3), .features__content:nth-child(4), .features__content:nth-child(5), .features__content:nth-child(6), .features__content:nth-child(7), .features__content:nth-child(8), .features__content:nth-child(9), .testimonials, .clients, .register {
+.footer__info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 25rem);
+  place-content: center;
+  gap: 10rem 4vw;
+}
+
+.footer__info--section {
+  display: grid;
+  row-gap: 1.5rem;
+  position: relative;
+  border-right: 1px solid var(--color-quinary);
+}
+
+.footer__info--section a:link,
+.footer__info--section a:visited {
+  display: block;
+  font-size: calc(1.2rem + 0.5vw);
+  letter-spacing: initial;
+}
+
+.footer__info--section__para {
+  color: var(--color-quinary);
+  font-weight: 300;
+  font-size: calc(1.2rem + 0.5vw);
+}
+
+.footer__info--section:last-child {
+  border: none;
+}
+
+.footer__info--section:nth-child(3) {
+  padding-right: 4vw;
+}
+
+.footer__info--section:nth-child(3) input[type=email] {
+  padding: 1rem;
+  background-color: transparent;
+  color: var(--color-quinary);
+  border: 0.1rem solid var(--color-quinary);
+  border-bottom: none;
+  border-right: none;
+}
+
+.footer__info--section:nth-child(3) input[type=submit] {
+  background-color: transparent;
+  color: var(--color-quinary);
+  font-size: 1.5rem;
+  border: 0.1rem solid var(--color-quinary);
+  padding: 1rem;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+}
+
+.footer__info--section:nth-child(3) input[type=submit]:hover,
+.footer__info--section:nth-child(3) input[type=submit]:active {
+  background-color: var(--color-quinary);
+  color: #000;
+}
+
+.footer__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__logo img {
+  height: 5rem;
+  width: 5rem;
+  margin-right: .5rem;
+}
+
+.footer__logo span {
+  font-size: 2.5rem;
+  color: var(--color-quinary);
+  letter-spacing: .3rem;
+  font-family: "Balsamiq Sans" cursive;
+}
+
+.footer__social {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer__social--call {
+  display: flex;
+  align-items: center;
+}
+
+.footer__social--call__para {
+  margin-left: 3rem;
+}
+
+.footer__social--icons {
+  display: flex;
+}
+
+.footer__social--icons__link:link, .footer__social--icons__link:visited {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  margin: 0 2rem;
+  padding: 2.5rem;
+  border: 2px solid var(--color-quinary);
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+
+.footer__social--icons__link:link i, .footer__social--icons__link:visited i {
+  font-size: 3rem;
+}
+
+.footer__social--icons__link:link::before, .footer__social--icons__link:visited::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-quinary);
+  border-radius: inherit;
+  transform: scale(0);
+  transition: transform .5s ease-in-out;
+  z-index: -1;
+}
+
+.footer__social--icons__link:hover::before, .footer__social--icons__link:active::after {
+  transform: scale(1);
+}
+
+@media screen and (max-width: 600px) {
+  .footer__social {
+    justify-content: center;
+  }
+}
+
+.hero, .motto, .features__content:nth-child(1), .features__content:nth-child(2), .features__content:nth-child(3), .features__content:nth-child(4), .features__content:nth-child(5), .features__content:nth-child(6), .features__content:nth-child(7), .features__content:nth-child(8), .features__content:nth-child(9), .testimonials, .clients, .register, .footer {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.hero, .motto, .trainers, .testimonials, .clients, .register {
+.hero, .motto, .trainers, .testimonials, .clients, .register, .footer {
   padding: 6vh 4vw;
 }
 
@@ -1121,7 +1261,7 @@ i {
   color: var(--color-quinary);
 }
 
-.motto__content--para, .features__content--para, .testimonials__content--slider__slide--para {
+.motto__content--para, .features__content--para, .testimonials__content--slider__slide--para, .footer__social--call__para {
   font-size: calc(1.2rem + 0.5vw);
   font-weight: 300;
   font-family: "Bolsamiq Sans", cursive;
@@ -1129,7 +1269,7 @@ i {
   color: var(--color-quinary);
 }
 
-.trainers__content--card__name, .testimonials__content--slider__slide--title {
+.trainers__content--card__name, .testimonials__content--slider__slide--title, .footer__info--section__title {
   font-size: calc(1.2rem + 0.5vw);
   color: var(--color-quinary);
 }
