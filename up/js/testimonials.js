@@ -12,7 +12,6 @@ function deactivateActive() {
 }
 
 for(let img of indicatorImages) {
-    console.log(img)
     img.addEventListener('click', () => {
         deactivateActive()
         img.classList.add('active')

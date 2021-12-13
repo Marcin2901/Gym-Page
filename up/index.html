@@ -340,11 +340,142 @@
 
     <!-- CLIENT SECTION -->
     <section class="clients">
-        Clients
+
+        <!-- Client Title -->
+        <h2 class="clients__title">Our Clients</h2>
+
+        <!-- Client Content -->
+        <div class="clients__content">
+            <div class="clients__content--logo"><img src="img/clients/client-1.png" alt=""></div>
+            <div class="clients__content--logo"><img src="img/clients/client-2.png" alt=""></div>
+            <div class="clients__content--logo"><img src="img/clients/client-3.png" alt=""></div>
+            <div class="clients__content--logo"><img src="img/clients/client-4.png" alt=""></div>
+            <div class="clients__content--logo"><img src="img/clients/client-5.png" alt=""></div>
+            <div class="clients__content--logo"><img src="img/clients/client-6.png" alt=""></div>
+            <div class="clients__content--logo"><img src="img/clients/client-7.png" alt=""></div>
+            <div class="clients__content--logo"><img src="img/clients/client-8.png" alt=""></div>
+        </div>
     </section>
+
+    <!-- SCROLL TO TOP BUTTON -->
+    <div class="scroll"></div>
+
     <!-- REGISTER SECTION -->
     <section class="register">
-        Register
+        <!-- Register Progres -->
+        <div class="register__progres">
+
+            <div class="register__progres--step">
+                <span>1</span>
+                <i class="fa fa-check"></i>
+            </div>
+
+            <div class="register__progres--step">
+                <span>2</span>
+                <i class="fa fa-check"></i>
+            </div>
+
+            <div class="register__progres--step">
+                <span>3</span>
+                <i class="fa fa-check"></i>
+            </div>
+
+            <div class="register__progres--step">
+                <span>4</span>
+                <i class="fa fa-check"></i>
+            </div>
+        </div>
+
+        <!-- Register Content -->
+        <div class="register__content">
+            <form class="register__content--form">
+                
+                <!-- Page 1 of 4 -->
+                <div class="register__content--form__page">
+
+                    <!-- First Name -->
+                    <div class="register__content--form__page--field">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name">
+                    </div>
+
+                    <!-- Last Name -->
+                    <div class="register__content--form__page--field">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name">
+                    </div>
+
+                    <!-- Button -->
+                    <div class="register__content--form__page--field">
+                        <button class="next-1 next">Next</button>
+                    </div>
+                </div>
+                
+                 <!-- Page 2 of 4 -->
+                 <div class="register__content--form__page">
+
+                    <!-- Email Address -->
+                    <div class="register__content--form__page--field">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email">
+                    </div>
+
+                    <!-- Phone Number -->
+                    <div class="register__content--form__page--field">
+                        <label for="phone">Phone Number</label>
+                        <input type="number" id="phone">
+                    </div>
+
+                     <!-- Buttons -->
+                    <div class="register__content--form__page--field btns">
+                        <button class="prev-1 prev">Previous</button>
+                        <button class="next-2 next">Next</button>
+                    </div>
+                </div>
+
+                 <!-- Page 3 of 4 -->
+                 <div class="register__content--form__page">
+                    <!-- Date of Birth -->
+                    <div class="register__content--form__page--field">
+                        <label for="date-of-birth">Date of Birth</label>
+                        <input type="text" id="date-of-birth" placeholder="dd/mm/rrrr">
+                    </div>
+                    <!-- Gender -->
+                    <div class="register__content--form__page--field">
+                        <label for="gender">Gender</label>
+                        <select id="gender">
+                            <option value="male" >Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+
+                     <!-- Buttons -->
+                    <div class="register__content--form__page--field btns">
+                        <button class="prev-2 prev">Previous</button>
+                        <button class="next-3 next">Next</button>
+                    </div>
+                </div>
+
+                 <!-- Page 4 of 4 -->
+                 <div class="register__content--form__page">
+                    <!-- Username -->
+                    <div class="register__content--form__page--field">
+                        <label for="username">Username</label>
+                        <input type="text" id="username">
+                    </div>
+                    <!-- Password -->
+                    <div class="register__content--form__page--field">
+                        <label for="password">Password</label>
+                        <input type="password" id="password">
+                    </div>
+                    <!-- Buttons -->
+                    <div class="register__content--form__page--field btns">
+                        <button class="prev-3 prev">Previous</button>
+                        <button class="submit" type="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </section>
     <!-- FOOTER SECTION -->
     <footer class="foooter">
@@ -353,5 +484,7 @@
 
     <script src="js/nav.js"></script>
     <script src="js/testimonials.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/register.js"></script>
 </body>
 </html>
